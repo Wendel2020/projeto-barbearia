@@ -1,0 +1,16 @@
+{
+    "name": "ifba/projeto-barbearia",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "ProjetoBarbearia\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wendel Neres",
+            "email": "91768433+Wendel2020@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
