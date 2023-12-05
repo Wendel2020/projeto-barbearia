@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>erro</h1>
+    <h1><?=$msg?></h1>
+
     
    
 </body>
