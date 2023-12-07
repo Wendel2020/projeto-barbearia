@@ -4,15 +4,22 @@ declare(strict_types=1);
 use ProjetoBarbearia\Core\Router;
 
 require __DIR__ . "/vendor/autoload.php";
+require __DIR__. "/app/rotas.php";
+require __DIR__. "/app/config.php";
 
-const PASTA_VIEW = "./app/Views/";
-const NS_CONTROLLERS = "\\ProjetoBarbearia\\Controllers\\"; 
+function css (string $arquivo):string{
+    return URL_BASE."public/css/{$arquivo}.css";
+}
+
+function imagens(string $arquivo):string {
+    return URL_BASE."public/img-index/{$arquivo}.png";
+}
+
+function componente (string $componente){
+    require PASTA_VIEW."componentes/{$componente}.view.php";
+
+}
 $url = $_GET['url'] ?? "";
-
-
-Router::add('/','HomeController', 'index');
-Router::add('/login', 'LoginController', 'login');
-Router::add('/cadastro', 'LoginController', 'criarconta');
 
 
 Router::exec($url);
