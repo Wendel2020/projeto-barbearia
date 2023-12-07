@@ -20,13 +20,11 @@ class HomeController extends Controller{
       $usuario->login = "Wendel";
       $usuario->senha = "1234";
       $usuario->tipo = 1;
-      $DAO = new UsuariosDAO();
-      $DAO->inserir($usuario);
+     UsuariosDAO::inserir($usuario);
     }
 
     public function teste2(){
-      $DAO = new UsuariosDAO;
-      $usuarios = $DAO->getAll();
+     $usuarios = UsuariosDAO::getAll();
       foreach ($usuarios as $usuario ) {
         echo $usuario->nome;
         echo "<hr>";
@@ -34,18 +32,38 @@ class HomeController extends Controller{
     }
 
     public function teste3(){
-      $DAO = new UsuariosDAO;
-      $usuario =$DAO->getById(9);
+      $usuario=UsuariosDAO::getById(9);
       var_dump($usuario);
     }
     
     public function teste4(){
-      $DAO = new UsuariosDAO;
-      $usuario =$DAO->getById(7);
+      $usuario = UsuariosDAO::getById(7);
       $usuario->nome = "Joao";
       $usuario->email = "Joao";
       $usuario->login = "Joao";
-      $DAO->editar($usuario);
+      UsuariosDAO::editar($usuario);
       
     }
+    public function teste5(){
+   
+      $usuario =UsuariosDAO::getById(9);
+      if ($usuario) {
+        UsuariosDAO::excluir($usuario);
+        echo "Usuario excluido com sucesso";
+      }else{
+        echo "Usuario não existe";
+      } 
+    }
+    public function teste6(){
+      $usuario = new Usuario(
+        ['nome' => "Wendel",
+        'email' => "Wendel",
+        'login' => "Wendel",
+        'senha' => "1234",
+        'tipo' => 1]
+      );
+      var_dump($usuario->getProps());
+
+    }
+
 }

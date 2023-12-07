@@ -2,14 +2,19 @@
 
 namespace ProjetoBarbearia\Models\DAO;
 
+use ProjetoBarbearia\Core\DAO;
 use ProjetoBarbearia\Core\Database;
 use ProjetoBarbearia\Models\Entities\Usuario;
 
-class UsuariosDAO{
+class UsuariosDAO extends DAO{
    
-    public function inserir(Usuario $usuario){
+  protected static string $tabela = "usuarios";
+  protected static string $classe = Usuario::class;
+
+    public static function inserir($usuario){
         $db = new Database();
-        $sql = "INSERT INTO usuarios
+        $tabela = static::$tabela;
+        $sql = "INSERT INTO {$tabela}
                   (nome,login,email,senha,tipo,turmas_id)
                   VALUES(?,?,?,?,?,?)";
                   
@@ -23,23 +28,13 @@ class UsuariosDAO{
         ];
         return $db->execute($sql, $dados);
       }
-      public function getAll(){
-        $db = new Database;
-        $sql = "SELECT * FROM usuarios";
-        $db->execute($sql);
-        return $db->getAll(Usuario::class);
-      }
+    
 
-      public function getById($id){
+   
+      public static function editar ($usuario){
         $db = new Database;
-        $sql = "SELECT * FROM usuarios WHERE id =?";
-        $db->execute($sql, [$id]);
-        return $db->get(Usuario::class);
-      }
-
-      public function editar (Usuario $usuario){
-        $db = new Database;
-        $sql = "UPDATE usuarios SET 
+        $tabela = static::$tabela;
+        $sql = "UPDATE {$tabela} SET 
                     nome = ?, email = ?, login = ?, senha = ?, tipo =? WHERE id =?";
         $dados = [
           $usuario->nome,
@@ -51,4 +46,5 @@ class UsuariosDAO{
         ];
         return $db->execute($sql, $dados);
       }
+
     }
