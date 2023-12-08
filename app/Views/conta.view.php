@@ -15,7 +15,7 @@
         <input type="email" placeholder="Email" name="email" required>
           <input type="text" placeholder="usuario" name="login" required>
           <input type="password" placeholder="Senha" name="senha" required>         
-          <a href="<?=linkrota("cadastrarconta")?>"></a><button class="btn"> 
+         <button class="btn"> 
             <i class="fa-solid fa-circle-plus"></i>
             Criar
           </button>

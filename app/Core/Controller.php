@@ -21,7 +21,7 @@ abstract class Controller {
 
     protected function post(?string $nome = null){
       if (is_null($nome)) {
-        return $this->postVars[$nome];
+        return $this->postVars;
       }
         if (key_exists($nome,$this->postVars)) {
           return $this->postVars[$nome];
@@ -32,7 +32,7 @@ abstract class Controller {
     
     protected function get(?string $nome = null){
       if (is_null($nome)) {
-        return $this->getVars[$nome];
+        return $this->getVars;
       }
         if (key_exists($nome,$this->getVars)) {
           return $this->getVars[$nome];

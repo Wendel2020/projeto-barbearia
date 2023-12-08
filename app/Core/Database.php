@@ -9,14 +9,16 @@ class Database{
     {
         $servidor = DB['servidor'];
         $banco = DB['banco'];
-        $usuario = DB['root'];
-        $senha = DB[''];
+        $usuario = DB['usuario'];
+        $senha = DB['senha'];
 
         $dsn = "mysql:host={$servidor};dbname={$banco}";
         $this->conexao = new \PDO($dsn, $usuario,$senha);
         
         
     }
+
+    
 
 
     public function execute(string $sql, array $dados =[]): bool{

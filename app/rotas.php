@@ -8,3 +8,4 @@ Router::post('/cadastrarconta', 'LoginController', 'cadastrarconta');
 Router::get('/cabelo', 'CabeloController', 'mostrar');
 
 
+

@@ -3,6 +3,7 @@ namespace ProjetoBarbearia\Core;
 
 class Router{
     protected static array $rotas =[];
+
     
     public static function get (string $rota, string $controller, string $acao){
 
@@ -12,6 +13,7 @@ class Router{
 
         static::add($rota,$controller,$acao,'POST');
     }
+
     protected static function add(string $rota, string $controller, string $acao, string $metodo){
        static::$rotas[$rota] = [$controller, $acao,$metodo];
     }
@@ -21,7 +23,7 @@ class Router{
         $rotas = static::$rotas;
             if (array_key_exists($url,$rotas)) {
                 [$controller, $acao, $metodo] = $rotas[$url];
-                if($metodo ==$metodoHTTP){
+                if($metodo == $metodoHTTP){
                     static::carregarController($controller,$acao);
                 }else{
                     static::erro('naopermitido', 405);

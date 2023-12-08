@@ -11,7 +11,7 @@
             
             <div class="servicos-opcoes-top">
                 <div class="cabelo">
-                    <img src="<?= imagens('cabelo')?>" alt="">
+                    <a href="<?=linkrota('cabelo')?>"><img src="<?= imagens('cabelo')?>" alt=""></a>
                     <h2>CABELO</h2>
                 </div>
             
