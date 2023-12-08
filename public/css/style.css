@@ -614,6 +614,90 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 
+/*CSS pagina cabelo*/
+body{
+    background-color:gainsboro;
+}
+
+.menu{
+    background-color: rgb(71.18750050663948, 71.18750050663948, 71.18750050663948, 1);
+   
+}
+
+.tema1{
+    background-color:rgba(104.12499949336052, 101.95572629570961, 101.95572629570961, 1);
+	width:400px;
+    color: white;
+    text-align: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+	
+}
+
+
+
+.corte1{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.corte2{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.corte3{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+}
+
+.cortes{
+    margin-top: 100px;;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cortes a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.preco{
+    background-color: rgb(45.00000111758709, 76.0000030696392, 80.00000283122063, 1);
+    border: solid 3px;
+    color: white;
+}
+.selecionar{
+    background-color: yellow;
+    border: solid 3px yellow;
+    border-radius: 10px 10px;
+}
+
+.horarios{
+    background-color:gainsboro;
+    
+    
+}
+
+
+.agendar{
+    margin-top: 80px;
+    text-align: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    border: solid 3px yellow;
+    border-radius: 5px 5px;
+    background-color: yellow;
+    width: 200px;
+}
+
+
 
 
     
