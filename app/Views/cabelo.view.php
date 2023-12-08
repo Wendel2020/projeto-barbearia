@@ -15,7 +15,7 @@ componente('topo');
 <div class="cortes">
 
 <div class="corte1">
-<img src="cliente1.png" width="100px">
+<img src="" width="100px">
 <p>Americano</p>
 <h3 class="preco">R$ 65, 00</h3>
 <a class="selecionar" href="" style="text-decoration: none;"><img src="icone.png" width="10px">Selecionar</a>
@@ -48,7 +48,7 @@ componente('topo');
 
 <div class="agendar">
 
-<a href="" style="text-decoration: none; color: black;">Agendar</a>
+<a href="<?=linkrota('form-cabelo')?>" style="text-decoration: none; color: black;">cadastrar cabelo</a>
 
 </div>
 <?= componente('rodape')?>

@@ -16,8 +16,10 @@
           <input type="text" placeholder="usuario" name="login" required>
           <input type="password" placeholder="Senha" name="senha" required>         
          <button class="btn"> 
+          <a href="<?=linkrota('login')?>">
             <i class="fa-solid fa-circle-plus"></i>
             Criar
+            </a>
           </button>
           <a href="<?=linkrota("login")?>" class="btn verde-claro">
             <i class="fa-solid fa-unlock"></i>

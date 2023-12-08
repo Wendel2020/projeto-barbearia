@@ -7,7 +7,7 @@ use ProjetoBarbearia\Models\Entities\Cabelo;
 
 class CabelosDAO extends DAO{
    
-  protected static string $tabela = "Cabelo";
+  protected static string $tabela = "cabelo";
   protected static string $classe = Cabelo::class;
 
 
