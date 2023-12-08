@@ -1,30 +1,36 @@
-<?php componente('topo')?>
-    
+
        
-<main class="principal">
+    <main class="principal">
         <div class="nav-alternativa">
-            <a class="btn-voltar" href="<?=linkrota("")?>">
+            <a class="btn-voltar" href="index.html">
               <i class="fa-solid fa-chevron-left"></i>
                 Voltar
             </a>     
           </div>    
     <div class="form-container">
-        <form id="login-form" method="POST" action="<?=linkrota("cadastrarconta")?>">
+        <form id="login-form">
           <h2><i class="fa-solid fa-user-plus"></i> Criar Conta</h2>
           <input type="text" placeholder="Nome Completo" name="nome" required>
+          <select name="turma">
+            <option>Selecione a sua turma</option>
+            <option>1° Matutino - Informática</option>
+            <option>1° Matutino - Edificações</option>
+            <option>1° Vespertino - Informática</option>
+            <option>1° Vespertino - Edificações</option>
+
+        </select>
         <input type="email" placeholder="Email" name="email" required>
           <input type="text" placeholder="usuario" name="login" required>
           <input type="password" placeholder="Senha" name="senha" required>         
-          <a href="<?=linkrota("cadastrarconta")?>"></a><button class="btn"> 
+          <button class="btn">
             <i class="fa-solid fa-circle-plus"></i>
             Criar
           </button>
-          <a href="<?=linkrota("login")?>" class="btn verde-claro">
+          <a href="login.html" class="btn verde-claro">
             <i class="fa-solid fa-unlock"></i>
             Voltar e Fazer Login
           </a>
         </form>
      </div>
     </main>
-    
-    <?php componente('rodape')?>
+

@@ -10,11 +10,11 @@
     <header>
     <div class="topo">
        
-       <h3>ENTRE OU CADASTRE-SE<h3> 
-       <img src="img-index/login.png" alt="">
+       <h3><a href="<?=linkrota("login")?>">ENTRE</a> OU <a href="<?=linkrota("cadastro")?>">CADASTRE-SE</a> <h3> 
+       
    </div>
    <div class="cabecalho">
-       <div class="logo"><img src="<?= imagens('logo')?>" alt=""></div>
+       <div class="logo"> <a href="<?=linkrota("")?>"><img src="<?= imagens('logo')?>" alt=""></a></div>
        <div class="menu">
            <nav class="menu-navegacao">
                <a class="item-menu-navegacao" href="">ELETRÔNICOS</a>

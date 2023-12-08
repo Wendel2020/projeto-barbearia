@@ -1,4 +1,30 @@
 <?php componente('topo')?>
-    <h1>Login</h1>
-    <h1><?=$pagina?> </h1>
+
+<main class="principal">
+
+<div class="nav-alternativa">
+  <a class="btn-voltar" href="<?=linkrota("")?>">
+    <i class="fa-solid fa-chevron-left"></i>
+      Voltar
+  </a>     
+</div>   
+<?= flash()?>
+
+<div class="form-container">
+  <form id="login-form" action="admin.html">
+    <h2><i class="fa-solid fa-key"></i> Login</h2>
+    <input type="text" placeholder="usuario" name="login" required>
+    <input type="password" placeholder="Senha" name="senha" required>
+    <button class="btn">
+      <i class="fa-solid fa-unlock"></i>
+      Login
+    </button>
+    <a href="<?=linkrota("cadastro")?>" class="btn verde-claro">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      Criar Conta
+    </a>
+  </form>
+</div>
+</main>
+
     <?php componente('rodape')?>

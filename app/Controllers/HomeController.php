@@ -3,8 +3,7 @@
 namespace ProjetoBarbearia\Controllers;
 
 use ProjetoBarbearia\Core\Controller;
-use ProjetoBarbearia\Models\DAO\UsuariosDAO;
-use ProjetoBarbearia\Models\Entities\Usuario;
+
 
 class HomeController extends Controller{
 
@@ -13,5 +12,4 @@ class HomeController extends Controller{
       $this->view('inicial', $dados);
     }
     
-
 }

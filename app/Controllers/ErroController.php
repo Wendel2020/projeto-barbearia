@@ -13,8 +13,9 @@ class ErroController extends Controller{
             case 'controller':
                 $this->view('erro', ['msg' => 'Controller não existe']);
                 break;
-            case "metodo":
-                $this->view('erro', ['msg' => 'O metodo não existe no Controlador']); 
+            case "naopermitido":
+                $this->view('erro', ['msg' => 'A rota não é permitida para este Método']); 
+                break;
         }
     }
 }
